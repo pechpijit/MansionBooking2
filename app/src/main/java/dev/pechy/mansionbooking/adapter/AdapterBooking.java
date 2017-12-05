@@ -38,9 +38,15 @@ public class AdapterBooking extends RecyclerView.Adapter<AdapterBooking.VersionV
         if (model.get(i).getStatus() == 2) {
             versionViewHolder.txtStatus.setText("(รอติดต่อกลับ)");
         } else if (model.get(i).getStatus() == 3) {
-            versionViewHolder.txtStatus.setText("(รอจ่ายมัดจำ)");
+            versionViewHolder.txtStatus.setText("(กรุณาชำระเงิน)");
         } else if (model.get(i).getStatus() == 4) {
-            versionViewHolder.txtStatus.setText("(เข้าอยู่แล้ว)");
+            versionViewHolder.txtStatus.setText("(รอตรวจสอบสลิป)");
+        }else if (model.get(i).getStatus() == 5) {
+            versionViewHolder.txtStatus.setText("(แก้ไขสลิป)");
+        }else if (model.get(i).getStatus() == 6) {
+            versionViewHolder.txtStatus.setText("(กำลังดำเนินการ)");
+        }else if (model.get(i).getStatus() == 8) {
+            versionViewHolder.txtStatus.setText("(ไม่อนุมัติการจอง)");
         }
         versionViewHolder.txtBuild.setText("อาคาร:"+model.get(i).getBuildName());
         versionViewHolder.txtRoom.setText("ห้อง:"+model.get(i).getRoomName());

@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:textAlignment="center"
-                android:text="(รอติดต่อกลับ)"
+                android:text=""
                 android:textColor="@color/green"
                 android:layout_margin="5dp"
                 android:textStyle="bold" />
@@ -55,7 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="qweqwe"
+                android:text=""
                 android:textStyle="bold"
                 android:layout_margin="5dp"
                 android:textColor="@color/white" />

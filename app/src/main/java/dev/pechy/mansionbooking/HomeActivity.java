@@ -43,14 +43,26 @@ public class HomeActivity extends BaseActivity {
         setContentView(R.layout.activity_home);
 
         boolean cancelbooking = false;
+        boolean upbooking = false;
+
         try {
             cancelbooking = getIntent().getExtras().getBoolean("cancelbooking");
         } catch (Exception e) {
             Log.d(TAG, e.getMessage());
         }
 
+        try {
+            upbooking = getIntent().getExtras().getBoolean("upbooking");
+        } catch (Exception e) {
+            Log.d(TAG, e.getMessage());
+        }
+
         if (cancelbooking) {
             dialogTM("สำเร็จ","ยกเลิกการจองห้องพักสำเร็จแล้ว");
+        }
+
+        if (upbooking) {
+            dialogTM("สำเร็จ","ส่งรูปสลิปเรียบร้อยแล้ว กรุณารอตรวจสอบ");
         }
 
 

@@ -22,31 +22,131 @@
             android:layout_height="2dp"
             android:background="@color/btn_back" />
 
-        <com.daimajia.slider.library.SliderLayout
-            android:id="@+id/slider"
+        <ImageView
+            android:id="@+id/image"
             android:layout_width="match_parent"
             android:layout_height="210dp"
-            custom:auto_cycle="true"
-            custom:indicator_visibility="visible"
-            custom:pager_animation="Accordion"
-            custom:pager_animation_span="1100" />
+            android:scaleType="centerCrop" />
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@color/btn_back" />
 
-        <FrameLayout
-            android:id="@+id/content"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <ProgressBar
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/progressBar"
-                android:layout_gravity="center" />
-        </FrameLayout>
+                android:layout_margin="4dp"
+                android:text="รายละเอียดห้องพัก"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/txtCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="หมายเลขห้อง : 101"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="ชื่อห้อง : 101"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtCat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="ประเภทห้องพัก : ห้องธรรมดา"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtMoney"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="ราคาห้องพักรายเดือน : 4000 บาท"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtVerify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/amber"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+           <FrameLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+               <android.support.v7.widget.AppCompatButton
+                   android:id="@+id/btnRoom"
+                   android:visibility="invisible"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:background="#009a9a"
+                   android:layout_gravity="center"
+                   android:padding="16dp"
+                   android:layout_marginLeft="4dp"
+                   android:layout_marginRight="2dp"
+                   android:text="เข้าสู่ห้องพัก"
+                   android:textColor="#FFF"
+                   android:textStyle="bold"/>
+
+               <LinearLayout
+                   android:id="@+id/layoutBtn"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+                   <android.support.v7.widget.AppCompatButton
+                       android:id="@+id/btnCancel"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:background="@color/orange"
+                       android:layout_gravity="center"
+                       android:padding="16dp"
+                       android:layout_marginLeft="4dp"
+                       android:layout_marginRight="2dp"
+                       android:text="ยกเลิกการจอง"
+                       android:textColor="#FFF"
+                       android:textStyle="bold"/>
+
+                   <android.support.v7.widget.AppCompatButton
+                       android:id="@+id/btnPay"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:background="@color/green"
+                       android:layout_gravity="center"
+                       android:padding="16dp"
+                       android:enabled="false"
+                       android:layout_marginLeft="2dp"
+                       android:layout_marginRight="4dp"
+                       android:layout_margin="4dp"
+                       android:text="ส่งรูปสลิปชำระเงิน"
+                       android:textColor="#FFF"
+                       android:textStyle="bold"/>
+               </LinearLayout>
+           </FrameLayout>
+        </LinearLayout>
     </LinearLayout>
 </FrameLayout>

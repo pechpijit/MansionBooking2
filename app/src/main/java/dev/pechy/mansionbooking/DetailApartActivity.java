@@ -40,7 +40,7 @@ public class DetailApartActivity extends BaseActivity implements BaseSliderView.
     LinearLayout view, view_detail, view_address;
     private SliderLayout mDemoSlider;
     HashMap<String, String> url_maps;
-    String la, lo;
+    String la, lo,phone;
     int id = 0;
     String TAG = "TravelDetailActivity";
     ImageView img_ex1, img_ex2;
@@ -97,6 +97,7 @@ public class DetailApartActivity extends BaseActivity implements BaseSliderView.
         view_address.setOnClickListener(this);
         findViewById(R.id.btn_map).setOnClickListener(this);
         findViewById(R.id.btn_book).setOnClickListener(this);
+        findViewById(R.id.btnCall).setOnClickListener(this);
 
         Bundle i = getIntent().getExtras();
         id = i.getInt("id");
@@ -162,7 +163,7 @@ public class DetailApartActivity extends BaseActivity implements BaseSliderView.
 
         la = model.getLocation().getLoLatitude();
         lo = model.getLocation().getLoLongitude();
-
+        phone = model.getLocation().getLoPhone();
         String strDetail = "";
 
         strDetail += "ชื่อ : "+model.getLocation().getLoName();
@@ -180,7 +181,6 @@ public class DetailApartActivity extends BaseActivity implements BaseSliderView.
         view.setVisibility(View.VISIBLE);
 
         BroadcastReceiver broadcast_reciever = new BroadcastReceiver() {
-
             @Override
             public void onReceive(Context arg0, Intent intent) {
                 String action = intent.getAction();
@@ -235,7 +235,25 @@ public class DetailApartActivity extends BaseActivity implements BaseSliderView.
             case R.id.btn_book:
                 checkCustomer();
                 break;
+            case R.id.btnCall:
+                dialogCall();
+                break;
         }
+    }
+
+    private void dialogCall() {
+        new AlertDialog.Builder(this,R.style.AppTheme_Dark_Dialog)
+                .setTitle("ยืนยันการโทรออก")
+                .setMessage("กด 'ตกลง' เพื่อยืนยันการโทรออก")
+                .setNegativeButton("ตกลง", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent callIntent = new Intent(Intent.ACTION_CALL, Uri.parse(phone));
+                        startActivity(callIntent);
+                    }
+                })
+                .setPositiveButton("ยกเลิก", null)
+                .show();
     }
 
     private void checkCustomer() {

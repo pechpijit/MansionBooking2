@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="dev.pechy.mansionbooking">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -55,8 +61,15 @@
             android:name=".ListBookingRoomActivity"
             android:label="หอพัก" />
         <activity
+            android:name=".UpdateImageActivity"
+            android:label="หอพัก" />
+        <activity
             android:name=".DetailRoomAndBookingActivity"
             android:label="@string/title_activity_detail_room_and_booking"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LoginRoomActivity"
+            android:label="@string/title_activity_login_room"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

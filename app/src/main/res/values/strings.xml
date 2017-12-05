@@ -11,4 +11,5 @@
     <string name="title_activity_booking_room">เลือกห้องที่ต้องการจอง</string>
     <string name="title_activity_detail_room">DetailRoomActivity</string>
     <string name="title_activity_detail_room_and_booking">DetailRoomAndBookingActivity</string>
+    <string name="title_activity_login_room">LoginRoomActivity</string>
 </resources>

@@ -15,10 +15,10 @@ public class BaseActivity extends AppCompatActivity {
     public static String BASE_URL = "http://192.168.1.42:8888/api/";
     public static String BASE_URL_PICTURE = "http://192.168.1.42:8888";
 
-    public String AUTH = "กำลังเข้าสู่ระบบ...";
-    public String REGIS = "กำลังสมัครสมาชิก...";
-    public String LOAD = "กำลังโหลดข้อมูล...";
-    public String VERIFY = "กำลังตรวจสอบ...";
+    public static String AUTH = "กำลังเข้าสู่ระบบ...";
+    public static String REGIS = "กำลังสมัครสมาชิก...";
+    public static String LOAD = "กำลังโหลดข้อมูล...";
+    public static String VERIFY = "กำลังตรวจสอบ...";
 
 
     @VisibleForTesting
