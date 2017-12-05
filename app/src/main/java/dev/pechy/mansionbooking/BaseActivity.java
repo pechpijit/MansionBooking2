@@ -12,8 +12,8 @@ import android.view.View;
 
 public class BaseActivity extends AppCompatActivity {
 
-    public static String BASE_URL = "http://192.168.1.42:8888/api/";
-    public static String BASE_URL_PICTURE = "http://192.168.1.42:8888";
+    public static String BASE_URL = "http://192.168.1.51:8989/api/";
+    public static String BASE_URL_PICTURE = "http://192.168.1.51:8989";
 
     public static String AUTH = "กำลังเข้าสู่ระบบ...";
     public static String REGIS = "กำลังสมัครสมาชิก...";
