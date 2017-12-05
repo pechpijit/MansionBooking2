@@ -45,6 +45,8 @@ public class AdapterBooking extends RecyclerView.Adapter<AdapterBooking.VersionV
             versionViewHolder.txtStatus.setText("(แก้ไขสลิป)");
         }else if (model.get(i).getStatus() == 6) {
             versionViewHolder.txtStatus.setText("(กำลังดำเนินการ)");
+        }else if (model.get(i).getStatus() == 7) {
+            versionViewHolder.txtStatus.setText("(เข้าอยู่แล้ว)");
         }else if (model.get(i).getStatus() == 8) {
             versionViewHolder.txtStatus.setText("(ไม่อนุมัติการจอง)");
         }

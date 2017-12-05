@@ -59,10 +59,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ListBookingRoomActivity"
-            android:label="หอพัก" />
+            android:label="รายการหอพัก" />
         <activity
             android:name=".UpdateImageActivity"
-            android:label="หอพัก" />
+            android:label="อัพโหลดสลิปการโอน" />
         <activity
             android:name=".DetailRoomAndBookingActivity"
             android:label="@string/title_activity_detail_room_and_booking"
@@ -70,7 +70,15 @@
         <activity
             android:name=".LoginRoomActivity"
             android:label="@string/title_activity_login_room"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ListRoomBillActivity"
+            android:label="รายการบิลค่าห้อง" />
+        <activity
+            android:name=".ComplaintActivity"
+            android:label="แจ้งร้องเรียน" />
+        <activity android:name=".DetailRoomBillctivity"
+            android:label="รายละเอียดใบแจ้งหนี"></activity>
     </application>
 
 </manifest>

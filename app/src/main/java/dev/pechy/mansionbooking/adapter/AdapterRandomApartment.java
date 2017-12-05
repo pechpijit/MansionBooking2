@@ -93,27 +93,37 @@ public class AdapterRandomApartment extends RecyclerView.Adapter<AdapterRandomAp
 
                 break;
             case 3:
-                Glide.with(context)
-                        .load(url + "/images/build/" + posts.get(i).getImage().get(0).getImage())
-                        .diskCacheStrategy(DiskCacheStrategy.ALL)
-                        .centerCrop()
-                        .error(R.drawable.nopic)
-                        .into(versionViewHolder.img1);
 
-                Glide.with(context)
-                        .load(url + "/images/build/" + posts.get(i).getImage().get(1).getImage())
-                        .diskCacheStrategy(DiskCacheStrategy.ALL)
-                        .centerCrop()
-                        .error(R.drawable.nopic)
-                        .into(versionViewHolder.img2);
+                try {
+                    Glide.with(context)
+                            .load(url + "/images/build/" + posts.get(i).getImage().get(0).getImage())
+                            .diskCacheStrategy(DiskCacheStrategy.ALL)
+                            .centerCrop()
+                            .error(R.drawable.nopic)
+                            .into(versionViewHolder.img1);
+                } catch (Exception e) {
+                }
 
+                try {
+                    Glide.with(context)
+                            .load(url + "/images/build/" + posts.get(i).getImage().get(1).getImage())
+                            .diskCacheStrategy(DiskCacheStrategy.ALL)
+                            .centerCrop()
+                            .error(R.drawable.nopic)
+                            .into(versionViewHolder.img2);
+                } catch (Exception e) {
+                }
 
-                Glide.with(context)
-                        .load(url + "/images/build/" + posts.get(i).getImage().get(2).getImage())
-                        .diskCacheStrategy(DiskCacheStrategy.ALL)
-                        .centerCrop()
-                        .error(R.drawable.nopic)
-                        .into(versionViewHolder.img3);
+                try {
+                    Glide.with(context)
+                            .load(url + "/images/build/" + posts.get(i).getImage().get(2).getImage())
+                            .diskCacheStrategy(DiskCacheStrategy.ALL)
+                            .centerCrop()
+                            .error(R.drawable.nopic)
+                            .into(versionViewHolder.img3);
+                } catch (Exception e) {
+                }
+
 
                 break;
         }

@@ -1,11 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#37474f"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="dev.pechy.mansionbooking.LoginRoomActivity"
+    tools:context=".DetailApartActivity"
     tools:showIn="@layout/activity_login_room">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/view"
+        android:visibility="visible">
 
-</android.support.constraint.ConstraintLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/btn_back" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/back1" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/btn_back" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="รายละเอียดห้องพัก"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="หน่วยมิตเตอร์น้ำล่าสุด : "
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="หน่วยมิตเตอร์ไฟล่าสุด : "
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_bill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/green"
+                    android:padding="16dp"
+                    android:textSize="18dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginLeft="60dp"
+                    android:text="ใบแจ้งหนี้"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#FFF"
+                    android:textStyle="bold"/>
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_com"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/amber"
+                    android:padding="16dp"
+                    android:textSize="18dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="แจ้งร้องเรียน"
+                    android:textColor="#FFF"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -28,7 +28,7 @@ import dev.pechy.mansionbooking.okhttp.CallServiceListener;
 public class DetailRoomAndBookingActivity extends BaseActivity {
 
     Button btnCancel, btnPay,btnRoom;
-    int bookingID;
+    int bookingID,roomId;
     Context context;
     LinearLayout layoutBtn;
     TextView txtVerify,txtTitle;
@@ -95,13 +95,15 @@ public class DetailRoomAndBookingActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(DetailRoomAndBookingActivity.this,UpdateImageActivity.class).putExtra("id",bookingID));
+                overridePendingTransition(R.anim.anim_slide_in_left, R.anim.anim_slide_out_left);
             }
         });
 
         btnRoom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(DetailRoomAndBookingActivity.this, LoginRoomActivity.class).putExtra("id",roomId));
+                overridePendingTransition(R.anim.anim_slide_in_left, R.anim.anim_slide_out_left);
             }
         });
 
@@ -125,6 +127,8 @@ public class DetailRoomAndBookingActivity extends BaseActivity {
         Gson gson = new Gson();
         ModelDetailBooking booking = gson.fromJson(json, ModelDetailBooking.class);
         txtTitle.setText("ข้อมูลห้องพัก");
+
+        roomId = booking.getRoom().getId();
 
         Glide.with(this)
                 .load(BASE_URL_PICTURE + "/images/room/" + booking.getRoom().getRoomImage())

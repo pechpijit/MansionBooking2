@@ -164,21 +164,6 @@
                     android:textColor="#FFF"
                     android:textStyle="bold"/>
             </LinearLayout>
-            <android.support.v7.widget.AppCompatButton
-                android:id="@+id/btnCall"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#009a9a"
-                android:layout_gravity="center"
-                android:padding="16dp"
-                android:textSize="18dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
-                android:text="โทรติดต่อหอพัก"
-                android:textColor="#FFF"
-                android:textStyle="bold"/>
         </LinearLayout>
     </ScrollView>
 </FrameLayout>

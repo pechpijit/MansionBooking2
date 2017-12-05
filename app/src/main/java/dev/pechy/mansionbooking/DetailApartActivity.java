@@ -97,7 +97,6 @@ public class DetailApartActivity extends BaseActivity implements BaseSliderView.
         view_address.setOnClickListener(this);
         findViewById(R.id.btn_map).setOnClickListener(this);
         findViewById(R.id.btn_book).setOnClickListener(this);
-        findViewById(R.id.btnCall).setOnClickListener(this);
 
         Bundle i = getIntent().getExtras();
         id = i.getInt("id");
@@ -235,25 +234,7 @@ public class DetailApartActivity extends BaseActivity implements BaseSliderView.
             case R.id.btn_book:
                 checkCustomer();
                 break;
-            case R.id.btnCall:
-                dialogCall();
-                break;
         }
-    }
-
-    private void dialogCall() {
-        new AlertDialog.Builder(this,R.style.AppTheme_Dark_Dialog)
-                .setTitle("ยืนยันการโทรออก")
-                .setMessage("กด 'ตกลง' เพื่อยืนยันการโทรออก")
-                .setNegativeButton("ตกลง", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent callIntent = new Intent(Intent.ACTION_CALL, Uri.parse(phone));
-                        startActivity(callIntent);
-                    }
-                })
-                .setPositiveButton("ยกเลิก", null)
-                .show();
     }
 
     private void checkCustomer() {
