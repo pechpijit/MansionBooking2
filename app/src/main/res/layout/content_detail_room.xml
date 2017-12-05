@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#37474f"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".DetailApartActivity"
+    tools:showIn="@layout/activity_detail_room">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/btn_back" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/back1" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/btn_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="รายละเอียดห้องพัก"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="หมายเลขห้อง : 101"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="ชื่อห้อง : 101"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/txtCat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="ประเภทห้องพัก : ห้องธรรมดา"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/txtMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="ราคาห้องพักรายเดือน : 4000 บาท"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnBooking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#009a9a"
+            android:padding="16dp"
+            android:text="จองห้อง"
+            android:textColor="#FFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MansionBooking</string>
+
+    <string name="facebook_app_id">1725475311081042</string>
+    <string name="fb_login_protocol_scheme">fb1725475311081042</string>
+    <string name="title_activity_home">MansionBooking</string>
+    s
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_detail_apart">DetailApartActivity</string>
+    <string name="title_activity_booking_room">เลือกห้องที่ต้องการจอง</string>
+    <string name="title_activity_detail_room">DetailRoomActivity</string>
+    <string name="title_activity_detail_room_and_booking">DetailRoomAndBookingActivity</string>
+</resources>

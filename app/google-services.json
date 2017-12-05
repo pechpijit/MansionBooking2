@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "237010795861",
+    "firebase_url": "https://mansionbooking-7f8f1.firebaseio.com",
+    "project_id": "mansionbooking-7f8f1",
+    "storage_bucket": "mansionbooking-7f8f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237010795861:android:db170d0bce405ca6",
+        "android_client_info": {
+          "package_name": "dev.pechy.mansionbooking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237010795861-ht87rj687brgcf9nl403fm59v6g5dqk0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.pechy.mansionbooking",
+            "certificate_hash": "960ffb6cb008bc15cad28d5d6d22cc900dbb3f7c"
+          }
+        },
+        {
+          "client_id": "237010795861-6q7t7u8havi38ankfm340dnq7g836ele.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyrdgVsORR4C5q-sLnEE3lVES18PPYxKs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237010795861-6q7t7u8havi38ankfm340dnq7g836ele.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
